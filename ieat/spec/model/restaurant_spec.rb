@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Restaurant do
+  it { should have_many(:products) }
   context 'testing total of products' do
     it 'returns total of products for a specific restaurant' do
       restaurant = Restaurant.create(name: 'restaurant test', address: 'anything...')
